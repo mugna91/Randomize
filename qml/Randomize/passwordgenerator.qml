@@ -138,29 +138,29 @@ Page{
                         return;
                     }
                     var out='';
-                    var numeri=['0','1','2','3','4','5','6','7','8','9'] //4 array contenenti tutti i char
+                    var numeri=['0','1','2','3','4','5','6','7','8','9']
                     var minuscole=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
                     var maiuscole=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
                     var speciali=['!','$','%','&','/','=','?','^','@','-','_','€','+','#','*'];
-                    var risult=new Array(); //array che serve per concatenare gli altri
-                    if (checkboxString.checked) { //verifica delle checkbox
-                        risult=risult.concat(minuscole); //concatena l'array minuscole e lo inserisce nell'array result
+                    var risult=new Array();
+                    if (checkboxString.checked) {
+                        risult=risult.concat(minuscole);
                     }
                     if (checkboxCapital.checked) {
                         risult=risult.concat(maiuscole);
                     }
                     if (checkboxDigits.checked) {
                         risult=risult.concat(numeri);
-                        risult=risult.concat(numeri); //aumenta le possibilità di estrarre numeri
+                        risult=risult.concat(numeri);
                     }
-                    if (checkboxSpecial.checked) {//di default l'if guarda se è =true quindi non serve
+                    if (checkboxSpecial.checked) {
                         risult=risult.concat(speciali);
                     }
                     for(var i=0;i<c;i++)
                     {
-                        out+=risult[Math.floor(Math.random()*risult.length)]; //fa il random di risult e lo mette su out
+                        out+=risult[Math.floor(Math.random()*risult.length)];
                     }
-                    output.text=out; //print di out su output
+                    output.text=out;
                 }
                 }
             }
