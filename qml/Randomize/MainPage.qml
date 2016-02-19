@@ -125,13 +125,13 @@ Page{
                            }
                         return true;
                     }
-                    var a = parseInt(numMin.text); //legge a=min
+                    var a = parseInt(numMin.text);
                     if(isNaN(a))
                     {
                         a=0;
                         numMin.text='0';
                     }
-                    var b = parseInt(numMax.text); //legge b=max
+                    var b = parseInt(numMax.text);
                     if(isNaN(b))
                     {
                         b=0;
@@ -140,7 +140,7 @@ Page{
                         output.text='Error! Select Maximum Number!';
                         return;
                     }
-                    var c = parseInt(numQuantity.text); //legge c=quant;
+                    var c = parseInt(numQuantity.text);
                     if(isNaN(c))
                     {
                         c=1;
@@ -162,17 +162,15 @@ Page{
                         numQuantity.text='1';
                         return;
                     }
-                    var ris=''; //ris è una stringa perchè tra apici ma inizialmente vuota
+                    var ris='';
                     if (checkboxUnique.checked==false) {
-                    for (var i=0;i<c;i++) //esegue c volte il codice sotto (c= n numeri da estrarre)
+                    for (var i=0;i<c;i++)
                     {
-                        ris+=Math.floor(Math.random()*(b-a+1)+a)+'-'; //+= significa ris=ris+....
-                                                                      // il + nelle stringhe le concatena
-                                                                      // per cui aggiunge a ris un numero casuale + ',' una virgola
+                        ris+=Math.floor(Math.random()*(b-a+1)+a)+'-';
                     }
-                    ris=ris.substring(0,ris.length-1); //ris=ris a parte l'ultimo carattere (una virgola in più)
+                    ris=ris.substring(0,ris.length-1);
 
-                    output.text=ris; //fa output di ris
+                    output.text=ris;
                     }
                     else {
                         if (c>b-a+1){
@@ -181,7 +179,7 @@ Page{
                         }
                         var out='';
                         var array= new Array();
-                        for (i=0;i<c;i++) //non usare x parti semppre usando i,j,k (il codice è più comprensibile, standard)
+                        for (i=0;i<c;i++)
                         {
                             var r;
                             do
